@@ -1,0 +1,13 @@
+ansible_user: ec2-user 
+ansible_password: DevOps321
+
+MONGO_IP: "mongodb-dev.krishnadev.space"
+CATALOGUE_IP: "catalogue-dev.krishnadev.space"
+REDIS_IP: "redis-dev.krishnadev.space"
+USER_IP: "user-dev.krishnadev.space"
+CART_IP: "cart-dev.krishnadev.space"
+MYSQL_IP: "mysql-dev.krishnadev.space"
+SHIPPING_IP: "shipping-dev.krishnadev.space"
+RABBITMQ_IP: "rabbitmq-dev.krishnadev.space"
+PAYMENT_IP: "payment-dev.krishnadev.space"
+FRONTEND_IP: "frontend-dev.krishnadev.space"

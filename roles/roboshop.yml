@@ -1,0 +1,4 @@
+- name: "{{ module }} server"
+  hosts: "{{ module }}"
+  roles:
+    "{{ module }}"
