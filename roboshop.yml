@@ -1,5 +1,5 @@
-- name: "{{ module }} server"
+- name: "installing {{ module }} server"
   hosts: "{{ module }}"
   become: yes
   roles:
-    - "{{ module }}"
+  - "{{ module }}"
