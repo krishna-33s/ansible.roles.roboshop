@@ -1,4 +1,5 @@
 - name: "{{ module }} server"
   hosts: "{{ module }}"
+  become: yes
   roles:
     - "{{ module }}"
