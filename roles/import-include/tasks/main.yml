@@ -3,5 +3,4 @@
   ansible.builtin.include_role:
     name: common
     tasks_from: import-include.yml
-
-  
+  when: os == "redhat"
