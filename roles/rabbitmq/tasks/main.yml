@@ -16,7 +16,7 @@
 
 - name: create rabbitmq user
   community.rabbitmq.rabbitmq_user:
-    name: "{{ name }}"
+    name: "{{ user }}"
     password: "{{ password }}"
     permissions:
       - vhost: /
