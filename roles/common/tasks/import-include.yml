@@ -3,5 +3,5 @@
     msg: "hii this is vk"
 
 - name: print2
-  ansible.builtin.debug:
+  ansible.builtin.dgebug:
     msg: "hii this is krishna"    
