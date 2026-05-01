@@ -1,0 +1,7 @@
+- name: print1
+  ansible.builtin.debug:
+    msg: "hii this is vk"
+
+- name: print2
+  ansible.builtin.debug:
+    msg: "hii this is krishna"    

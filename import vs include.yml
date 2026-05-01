@@ -1,0 +1,6 @@
+- name: import vs include
+  hosts: local 
+  become: yes
+
+  roles:
+  - import-include
