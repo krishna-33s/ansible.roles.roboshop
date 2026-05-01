@@ -31,8 +31,8 @@
     state: import
     name: all
     login_host: "{{ MYSQL_IP }}"
-    login_user: root
-    login_password: RoboShop@1
+    login_user: "{{ user }}"
+    login_password: "{{ password }}"
     target: "{{ item }}"
 
   loop:
@@ -42,7 +42,7 @@
 
 - name: start service
   ansible.builtin.service:
-    name: shipping
+    name: "{{ module }}"
     state: restarted
     enabled: yes    
   
