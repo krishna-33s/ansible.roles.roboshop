@@ -1,0 +1,3 @@
+- name: print intro
+  ansible.builtin.debug:
+    msg: "Hi! This is {{ module }} server. Welcome!!"
