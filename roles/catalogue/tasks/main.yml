@@ -8,3 +8,34 @@
   ansible.builtin.import_role:
     name: common
     tasks_from: nodejs-setup.yml
+
+- name: system services
+  ansible.builtin.import_role:
+    name: common
+    tasks_from: systemd.yml
+
+    
+- name: copy mongo.repo  
+  ansible.builtin.copy:
+    src: mongo.repo
+    dest: /etc/yum.repos.d/mongo.repo
+
+- name: install mongo client
+  ansible.builtin.dnf:
+    name: mongodb-mongosh
+    state: present
+
+- name: products loading
+  ansible.builtin.command: mongosh --host "{{ MONGO_IP }}" --quiet  --eval 'db.getMongo().getDBNames().indexOf("catalogue")'
+  register: catalogue_output
+
+
+- name: load the products
+  ansible.builtin.shell: mongosh --host "{{ MONGO_IP }}" </app/db/master-data.js          
+  when: catalogue_output.stdout | int < 0
+
+- name: start the service
+  ansible.builtin.service:
+    name: "{{ module }}"
+    state : restarted
+    enabled: yes
