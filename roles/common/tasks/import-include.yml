@@ -2,6 +2,11 @@
   ansible.builtin.debug:
     msg: "hii this is vk"
 
+- name: setvariable
+  ansible.builtin.set_fact:
+    os: "redhat"
+
+
 - name: print2
   ansible.builtin.debug:
     msg: "hii this is krishna"
