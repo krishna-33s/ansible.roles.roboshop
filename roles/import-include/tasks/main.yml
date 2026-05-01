@@ -1,5 +1,4 @@
 - name: import-include
   ansible.builtin.import_role:
-  - name: common
+    name: common
     tasks_from: import-include.yml
-    
